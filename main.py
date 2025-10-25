@@ -43,14 +43,16 @@ engine = create_engine("sqlite:///shop.db", echo=False)
 Base.metadata.create_all(engine)
 session = sessionmaker(bind=engine)
 
-with session() as ses:
-    ses:Session
+# написание запросов 
+# with session() as ses:
+#     ses:Session
 
-    users = ses.execute(query)
+#     users = ses.execute(query)
 
-    print(users.all())
+#     print(users.all())
 
 # ----------------- Генерация данных -----------------
+# session = session()
 # # 1. Пользователи
 # users = [User(name=f"User{i}", email=f"user{i}@mail.com") for i in range(1, 11)]
 # session.add_all(users)
